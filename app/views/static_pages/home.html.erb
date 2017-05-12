@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <% @week_days.each do |day| %>
+      <th><%= day %></th>
+    <% end %>
+  <tr>
+
+  <% @weeks.each do |week| %>
+    <tr>
+    <% week.each do |day| %>
+      <td><%= day.day %></td>
+    <% end %>
+    </tr>
+  <% end %>
+</table>
