@@ -1,18 +1,10 @@
 class StaticPagesController < ApplicationController
-  include StaticPagesHelper
+  include CalenderHelper
 
-  def home
-    @weeks = data(Date.today)
-    @month = Date.today.strftime('%B')
-    @week_days = [
-      "Mon", 
-      "Tue", 
-      "Wed", 
-      "Thur",
-      "Fri",
-      "Sat",
-      "Sun"
-    ]
+  def home    
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
+    @weeks = weeks(@date)
+    @week_days = WEEKDAYS
   end
 
 end

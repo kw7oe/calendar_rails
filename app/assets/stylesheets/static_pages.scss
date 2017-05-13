@@ -8,12 +8,33 @@ $primary-font: 'Roboto', sans-serif;
 
 * {  
   font-family: $primary-font;
+  color: #333333;
+}
+
+a {
+  color: #7F7F7F;
+  text-decoration: none;
+
+  &:visited {
+    color: #7F7F7F;
+  }
+
+  &:hover {
+    color: #4C4C4C;
+  }
+
+  &.arrow {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
 }
 
 .text-center {
   margin-top: 10%;
   text-align: center;
 }
+
+
 
 .calender {  
   margin: 0 auto;
@@ -57,8 +78,9 @@ $primary-font: 'Roboto', sans-serif;
           display: none;
         }
 
-        &.today {
-          background-color: #FF6666;
+        &.today {          
+          color: white;
+          background-color: #FF3333;
         }
       }
 
@@ -67,8 +89,7 @@ $primary-font: 'Roboto', sans-serif;
           background-color: #E6E6E6;
         }
         p.today {
-          color: white;
-          background-color: darken(#FF6666, 10%);
+          background-color: darken(#FF3333, 10%);
         }
       }
 

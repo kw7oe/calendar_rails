@@ -1,4 +1,9 @@
-<h1 class = "text-center"><%= @month %></h1>
+<h1 class = "text-center">
+  <%= link_to "<", root_path(date: @date.prev_month), class: "arrow" %>
+  <%= @date.strftime('%B %Y')%>  
+  <%= link_to ">", root_path(date: @date.next_month), class: "arrow" %>
+</h1>
+
 <div  class = "calender">
   <table>
     <!-- Generate Week Days -->
