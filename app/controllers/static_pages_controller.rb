@@ -3,14 +3,15 @@ class StaticPagesController < ApplicationController
 
   def home
     @weeks = data(Date.today)
+    @month = Date.today.strftime('%B')
     @week_days = [
-      "Monday", 
-      "Tuesday", 
-      "Wednesday", 
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
+      "Mon", 
+      "Tue", 
+      "Wed", 
+      "Thur",
+      "Fri",
+      "Sat",
+      "Sun"
     ]
   end
 

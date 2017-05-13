@@ -1,3 +1,78 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+$size: (400px / 7);
+$primary-font: 'Roboto', sans-serif;
+
+* {  
+  font-family: $primary-font;
+}
+
+.text-center {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.calender {  
+  margin: 0 auto;
+  width: 400px;
+  height: $size * 6;
+  padding: 16px 18px;
+  border: 1px solid #B3B3B3;
+  border-radius: 8px;
+  overflow: hidden;
+
+  table {
+    border-collapse: collapse;
+  }
+
+  .weekdays {  
+
+    th {
+      text-transform: uppercase;
+      height: $size;
+      width: $size;
+    }
+
+  }
+
+  .days {
+    height: $size;
+    width: $size;
+
+    td {
+      text-align: center; 
+      cursor: pointer;
+
+      p {        
+        border-radius: 50%;
+        margin: 0;
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+
+        &.null_day {
+          display: none;
+        }
+
+        &.today {
+          background-color: #FF6666;
+        }
+      }
+
+      &:hover {
+        p {
+          background-color: #E6E6E6;
+        }
+        p.today {
+          color: white;
+          background-color: darken(#FF6666, 10%);
+        }
+      }
+
+    } // End td
+  } // End .days
+} // End .calender
+

@@ -1,15 +1,20 @@
-<table>
-  <tr>
-    <% @week_days.each do |day| %>
-      <th><%= day %></th>
-    <% end %>
-  <tr>
-
-  <% @weeks.each do |week| %>
+<h1 class = "text-center"><%= @month %></h1>
+<div  class = "calender">
+  <table>
+    <!-- Generate Week Days -->
+    <tr class = "weekdays">
+      <% @week_days.each do |day| %>
+        <th><%= day %></th>
+      <% end %>
     <tr>
-    <% week.each do |day| %>
-      <td><%= day.day %></td>
+
+    <!-- Generate Days -->
+    <% @weeks.each do |week| %>
+      <tr class = "days">
+      <% week.each do |day| %>
+        <%= td_for(day) %>
+      <% end %>
+      </tr>
     <% end %>
-    </tr>
-  <% end %>
-</table>
+  </table>
+</tr>
