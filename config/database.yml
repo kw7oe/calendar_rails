@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: calender_production
+  username: calender
+  password: <%= ENV['CALENDER_DATABASE_PASSWORD'] %>
+
